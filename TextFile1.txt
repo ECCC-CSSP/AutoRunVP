@@ -1,0 +1,797 @@
+﻿                                                            20110318
+                                                            085804
+
+
+======================================================================
+Target: FemEngineHD
+
+
+
+======================= Computing Environment ========================
+  Computer name       : WMON01DTCHLEBL
+  Number of processors: 2
+======================================================================
+
+
+  Section: TIME ------------------------------------------------------
+      start_time : 2001 1 6 0 0 0 
+      time_step_interval : 60
+      number_of_time_steps : 11520
+
+
+  Section: DOMAIN ----------------------------------------------------
+      number_of_dimensions : 2
+      discretization : 2
+      number_of_meshes : 1
+      file_name : C:\CSSP\Modelling\Mike21\Quebec\Blanc Sablon\Blan Sablon\Model\Model Inputs\Blanc Sablon.mesh
+      type_of_reordering : 1
+      number_of_domains : 16
+      type_of_datum_depth : 1 (default)
+      datum_depth : 0
+      minimum_depth : -0.499959
+      thresshold_depth : -0.499959 (default)
+      type_of_mesh : 0
+      type_of_gauss : 3
+      mesh_debug : 0 (default)
+
+
+========================== Mesh information ==========================
+  Number of elements         : 1617
+  Number of faces            : 2601
+  Number of nodes            : 982
+  Number of sections         : 4
+  Min x-coordinate           : -0.998724
+  Max x-coordinate           : -0.995422
+  Min y-coordinate           : 0.895969
+  Max y-coordinate           : 0.897773
+  Min z-coordinate           : -91
+  Max z-coordinate           : -0.499959
+======================================================================
+
+
+======================== Boundary information ========================
+
+  number                code    number of points     number of faces
+       1                   1                 285                 284
+       2                   2                  18                  17
+       3                   3                  34                  33
+       4                   4                  18                  17
+======================================================================
+      write_boundary : 0 (default)
+
+
+  Section: MODULE_SELECTION ------------------------------------------
+      mode_of_hydrodynamic_module : 2
+      mode_of_transport_module : 2
+      mode_of_mud_transport_module : 0
+      mode_of_sand_transport_module : 0
+      mode_of_eco_lab_module : 0
+      mode_of_particle_tracking_module : 0
+
+
+  Section: HYDRODYNAMIC_MODULE ---------------------------------------
+      mode : 2
+
+
+    Section: EQUATION ------------------------------------------------
+        formulation : 4
+        time_formulation : 2 (default)
+
+
+    Section: TIME ----------------------------------------------------
+        start_time_step : 0
+        time_step_factor : 1
+
+
+    Section: SPACE ---------------------------------------------------
+        number_of_2D_mesh_geometry : 1
+        number_of_2D_mesh_velocity : 1
+        number_of_2D_mesh_elevation : 1
+
+
+    Section: FLOOD_AND_DRY -------------------------------------------
+        type : 0
+
+
+    Section: DEPTH ---------------------------------------------------
+        type : 0 (default)
+
+
+    Section: DENSITY -------------------------------------------------
+        type : 0
+
+
+    Section: EDDY_VISCOSITY ------------------------------------------
+
+
+      Section: HORIZONTAL_EDDY_VISCOSITY -----------------------------
+          type : 3
+
+
+        Section: SMAGORINSKY_FORMULATION -----------------------------
+            format : 0
+            constant_value : 0.28
+            minimum_eddy_viscosity : 0.000001
+            maximum_eddy_viscosity : 2.1474E+09
+
+
+    Section: BED_RESISTANCE ------------------------------------------
+        type : 4
+
+
+      Section: MANNING_NUMBER ----------------------------------------
+          format : 0
+          constant_value : 32
+
+
+    Section: CORIOLIS ------------------------------------------------
+        type : 2
+
+
+    Section: WIND_FORCING --------------------------------------------
+        type : 1
+        format : 0
+        constant_speed : 15
+        constant_direction : 90
+        type_of_soft_start : 2
+        soft_time_interval : 0
+
+
+      Section: WIND_FRICTION -----------------------------------------
+          type : 1
+          linear_friction_low : 0.001255
+          linear_speed_low : 7
+          linear_friction_high : 0.002425
+          linear_speed_high : 25
+
+
+    Section: ICE -----------------------------------------------------
+        type : 0
+
+
+    Section: TIDAL_POTENTIAL -----------------------------------------
+        type : 0
+
+
+    Section: PRECIPITATION_EVAPORATION -------------------------------
+        type_of_precipitation : 0
+        type_of_evaporation : 0
+
+
+    Section: RADIATION_STRESS ----------------------------------------
+        type : 0
+
+
+    Section: SOURCES -------------------------------------------------
+        number_of_sources : 8
+
+
+      Section: SOURCE_1 ----------------------------------------------
+          include : 1
+          coordinate_type : LONG/LAT
+          coordinates : -57.126223 51.420536 
+          type : 1
+          format : 0
+          constant_value : 0.002
+          type_of_soft_start : 2
+          soft_time_interval : 0
+          reference_value : 0
+          type_of_time_interpolation : 1
+
+
+      Section: SOURCE_2 ----------------------------------------------
+          include : 1
+          coordinate_type : LONG/LAT
+          coordinates : -57.156023 51.438464 
+          type : 1
+          format : 0
+          constant_value : 70
+          type_of_soft_start : 2
+          soft_time_interval : 0
+          reference_value : 0
+          type_of_time_interpolation : 1
+
+
+      Section: SOURCE_3 ----------------------------------------------
+          include : 0
+
+
+      Section: SOURCE_4 ----------------------------------------------
+          include : 1
+          coordinate_type : LONG/LAT
+          coordinates : -57.135469 51.4282 
+          type : 1
+          format : 0
+          constant_value : 0.0007
+          type_of_soft_start : 2
+          soft_time_interval : 0
+          reference_value : 0
+          type_of_time_interpolation : 1
+
+
+      Section: SOURCE_5 ----------------------------------------------
+          include : 1
+          coordinate_type : LONG/LAT
+          coordinates : -57.169963 51.406315 
+          type : 1
+          format : 0
+          constant_value : 0.008
+          type_of_soft_start : 2
+          soft_time_interval : 0
+          reference_value : 0
+          type_of_time_interpolation : 1
+
+
+      Section: SOURCE_6 ----------------------------------------------
+          include : 1
+          coordinate_type : LONG/LAT
+          coordinates : -57.199715 51.409805 
+          type : 1
+          format : 0
+          constant_value : 0.005
+          type_of_soft_start : 2
+          soft_time_interval : 0
+          reference_value : 0
+          type_of_time_interpolation : 1
+
+
+      Section: SOURCE_7 ----------------------------------------------
+          include : 1
+          coordinate_type : LONG/LAT
+          coordinates : -57.169963 51.406315 
+          type : 1
+          format : 0
+          constant_value : 0.008
+          type_of_soft_start : 2
+          soft_time_interval : 0
+          reference_value : 0
+          type_of_time_interpolation : 1
+
+
+      Section: SOURCE_8 ----------------------------------------------
+          include : 1
+          coordinate_type : LONG/LAT
+          coordinates : -57.182259 51.4092 
+          type : 1
+          format : 0
+          constant_value : 0.008
+          type_of_soft_start : 2
+          soft_time_interval : 0
+          reference_value : 0
+          type_of_time_interpolation : 1
+
+
+======================= Discrete nodal points ========================
+
+ point con. point 2D element             x             y
+
+     1          0        159 -0.997041E+00  0.897458E+00
+     2          0       1021 -0.997561E+00  0.897771E+00
+     3          0         12 -0.997202E+00  0.897591E+00
+     4          0        486 -0.997804E+00  0.897209E+00
+     5          0        915 -0.998323E+00  0.897270E+00
+     6          0        486 -0.997804E+00  0.897209E+00
+     7          0        452 -0.998019E+00  0.897260E+00
+======================================================================
+
+
+    Section: SOLUTION_TECHNIQUE --------------------------------------
+        scheme_of_time_integration : 1
+        scheme_of_space_discretization_horizontal : 1
+        method_of_space_discretization_horizontal : 0
+        type_of_entropy_fix : 0 (default)
+        CFL_critical_HD : 0.8
+        dt_min_HD : 0.01
+        dt_max_HD : 30
+        CFL_critical_AD : 0.8
+        dt_min_AD : 0.01
+        dt_max_AD : 30
+        type_of_land_condition : 2 (default)
+        error_level : 0
+        maximum_number_of_errors : 200
+
+
+    Section: STRUCTURE_MODULE ----------------------------------------
+        relaxation_factor : 0 (default)
+
+
+    Section: STRUCTURES ----------------------------------------------
+
+
+      Section: WEIR --------------------------------------------------
+
+
+      Section: GATES -------------------------------------------------
+          number_of_gates : 0
+
+
+      Section: PIERS -------------------------------------------------
+          format : 0
+          number_of_piers : 0
+
+
+      Section: TURBINES ----------------------------------------------
+          format : 0
+          number_of_turbines : 0
+
+
+    Section: INITIAL_CONDITIONS --------------------------------------
+        type : 1
+        surface_elevation_constant : 1.28
+        u_velocity_constant : 0
+        v_velocity_constant : 0
+
+
+    Section: BOUNDARY_CONDITIONS -------------------------------------
+        internal_land_boundary_type : 1
+
+
+      Section: CODE_1 ------------------------------------------------
+          type : 1
+
+
+      Section: CODE_2 ------------------------------------------------
+          type : 4
+          format : 1
+          file_name : C:\CSSP\Modelling\Mike21\Quebec\Blanc Sablon\Blan Sablon\External Data\Currents West.dfs0
+          item_numbers : 1 2 
+          type_of_soft_start : 2
+          soft_time_interval : 0
+          reference_values : 0 0 
+          type_of_time_interpolation : 1
+--------------------------- Data File Summary ---------------------------
+  Creator: MIKE Zero
+  File   : C:\CSSP\Modelling\Mike21\Quebec\Blanc Sablon\Blan Sablon\External Data\Currents West.dfs0
+  Title  : Current West
+
+  Start date  Start time  Sets   Interval  Unit
+  2001-01-01    00:00:00  8760       3600  second
+
+  Dynamic items:
+  Item name            Item type               Minimum    Maximum Unit
+  u velocity           u-velocity component  -0.446299     0.3303 m/s
+  v velocity           v-velocity component    -0.0732     0.0749 m/s
+----------------------------------------------------------------------
+
+
+      Section: CODE_3 ------------------------------------------------
+          type : 6
+          type_secondary : 1
+          format : 1
+          file_name : C:\CSSP\Modelling\Mike21\Quebec\Blanc Sablon\Blan Sablon\External Data\WL South.dfs0
+          item_number : 1
+          type_of_soft_start : 2
+          soft_time_interval : 0
+          reference_value : 0
+          type_of_time_interpolation : 1
+          type_of_coriolis_correction : 0
+          type_of_wind_correction : 0
+          type_of_pressure_correction : 1
+          type_of_radiation_stress_correction : 1
+--------------------------- Data File Summary ---------------------------
+  Creator: MIKE Zero
+  File   : C:\CSSP\Modelling\Mike21\Quebec\Blanc Sablon\Blan Sablon\External Data\WL South.dfs0
+  Title  : WL South
+
+  Start date  Start time  Sets   Interval  Unit
+  2001-01-01    00:00:00  8760       3600  second
+
+  Dynamic items:
+  Item name            Item type               Minimum    Maximum Unit
+  WL South             Water Level              0.1164     1.9277 meter
+----------------------------------------------------------------------
+
+
+      Section: CODE_4 ------------------------------------------------
+          type : 4
+          format : 1
+          file_name : C:\CSSP\Modelling\Mike21\Quebec\Blanc Sablon\Blan Sablon\External Data\Currents East.dfs0
+          item_numbers : 1 2 
+          type_of_soft_start : 2
+          soft_time_interval : 0
+          reference_values : 0 0 
+          type_of_time_interpolation : 1
+--------------------------- Data File Summary ---------------------------
+  Creator: MIKE Zero
+  File   : C:\CSSP\Modelling\Mike21\Quebec\Blanc Sablon\Blan Sablon\External Data\Currents East.dfs0
+  Title  : Currents East
+
+  Start date  Start time  Sets   Interval  Unit
+  2001-01-01    00:00:00  8760       3600  second
+
+  Dynamic items:
+  Item name            Item type               Minimum    Maximum Unit
+  u velocity           u-velocity component    -0.7651     0.5831 m/s
+  v velocity           v-velocity component  -0.321299     0.2353 m/s
+----------------------------------------------------------------------
+
+
+    Section: TEMPERATURE_SALINITY_MODULE -----------------------------
+        temperature_mode : 0
+        salinity_mode : 0
+
+
+    Section: DECOUPLING ----------------------------------------------
+        type : 0
+
+
+    Section: OUTPUTS -------------------------------------------------
+        number_of_outputs : 1
+
+
+      Section: OUTPUT_1 ----------------------------------------------
+          include : 0
+
+
+  Section: TRANSPORT_MODULE ------------------------------------------
+      mode : 2
+
+
+    Section: EQUATION ------------------------------------------------
+
+
+    Section: TIME ----------------------------------------------------
+        start_time_step : 0
+
+
+    Section: SPACE ---------------------------------------------------
+        number_of_2D_mesh_concentration : 1
+
+
+    Section: COMPONENTS ----------------------------------------------
+        number_of_components : 1
+
+
+    Section: COMPONENTS ----------------------------------------------
+
+
+      Section: COMPONENT_1 -------------------------------------------
+          type : 2
+          dimension : 3
+          description : Concentration - component 1
+          EUM_type : 100007
+          EUM_unit : 2200
+          minimum_value : 0
+          maximum_value : 2.1474E+09
+
+
+    Section: DISPERSION ----------------------------------------------
+
+
+      Section: HORIZONTAL_DISPERSION ---------------------------------
+
+
+        Section: COMPONENT_1 -----------------------------------------
+            type : 2
+
+
+          Section: SCALED_EDDY_VISCOSITY -----------------------------
+              sigma : 1
+              minimum_dispersion : 0 (default)
+              maximum_dispersion : 1.E+10 (default)
+
+
+    Section: DECAY ---------------------------------------------------
+
+
+      Section: COMPONENT_1 -------------------------------------------
+          type : 1
+          format : 0
+          constant_value : 0.000054
+
+
+    Section: SOURCES -------------------------------------------------
+
+
+      Section: SOURCE_1 ----------------------------------------------
+
+
+        Section: COMPONENT_1 -----------------------------------------
+            type : 1
+            format : 0
+            constant_value : 3200000
+            type_of_soft_start : 2
+            soft_time_interval : 0
+            reference_value : 0
+            type_of_time_interpolation : 1
+
+
+      Section: SOURCE_2 ----------------------------------------------
+
+
+        Section: COMPONENT_1 -----------------------------------------
+            type : 1
+            format : 0
+            constant_value : 0
+            type_of_soft_start : 2
+            soft_time_interval : 0
+            reference_value : 0
+            type_of_time_interpolation : 1
+
+
+      Section: SOURCE_4 ----------------------------------------------
+
+
+        Section: COMPONENT_1 -----------------------------------------
+            type : 1
+            format : 0
+            constant_value : 3200000
+            type_of_soft_start : 2
+            soft_time_interval : 0
+            reference_value : 0
+            type_of_time_interpolation : 1
+
+
+      Section: SOURCE_5 ----------------------------------------------
+
+
+        Section: COMPONENT_1 -----------------------------------------
+            type : 1
+            format : 0
+            constant_value : 3200000
+            type_of_soft_start : 2
+            soft_time_interval : 0
+            reference_value : 0
+            type_of_time_interpolation : 1
+
+
+      Section: SOURCE_6 ----------------------------------------------
+
+
+        Section: COMPONENT_1 -----------------------------------------
+            type : 1
+            format : 0
+            constant_value : 3200000
+            type_of_soft_start : 2
+            soft_time_interval : 0
+            reference_value : 0
+            type_of_time_interpolation : 1
+
+
+      Section: SOURCE_7 ----------------------------------------------
+
+
+        Section: COMPONENT_1 -----------------------------------------
+            type : 1
+            format : 0
+            constant_value : 3200000
+            type_of_soft_start : 2
+            soft_time_interval : 0
+            reference_value : 0
+            type_of_time_interpolation : 1
+
+
+      Section: SOURCE_8 ----------------------------------------------
+
+
+        Section: COMPONENT_1 -----------------------------------------
+            type : 1
+            format : 0
+            constant_value : 3200000
+            type_of_soft_start : 2
+            soft_time_interval : 0
+            reference_value : 0
+            type_of_time_interpolation : 1
+
+
+    Section: INITIAL_CONDITIONS --------------------------------------
+
+
+      Section: COMPONENT_1 -------------------------------------------
+          type : 1
+          format : 0
+          constant_value : 0
+
+
+    Section: BOUNDARY_CONDITIONS -------------------------------------
+
+
+      Section: CODE_1 ------------------------------------------------
+
+
+      Section: CODE_2 ------------------------------------------------
+
+
+        Section: COMPONENT_1 -----------------------------------------
+            type : 2
+            format : 0
+            constant_value : 0
+            type_of_soft_start : 2
+            soft_time_interval : 0
+            reference_value : 0
+            type_of_time_interpolation : 1
+
+
+      Section: CODE_3 ------------------------------------------------
+
+
+        Section: COMPONENT_1 -----------------------------------------
+            type : 2
+            format : 0
+            constant_value : 0
+            type_of_soft_start : 2
+            soft_time_interval : 0
+            reference_value : 0
+            type_of_time_interpolation : 1
+
+
+      Section: CODE_4 ------------------------------------------------
+
+
+        Section: COMPONENT_1 -----------------------------------------
+            type : 2
+            format : 0
+            constant_value : 0
+            type_of_soft_start : 2
+            soft_time_interval : 0
+            reference_value : 0
+            type_of_time_interpolation : 1
+
+
+    Section: SOLUTION_TECHNIQUE --------------------------------------
+        scheme_of_time_integration : 1
+        scheme_of_space_discretization_horizontal : 1
+        method_of_space_discretization_horizontal : 0
+        h_min : 0 (default)
+
+
+    Section: OUTPUTS -------------------------------------------------
+        number_of_outputs : 1
+
+
+      Section: OUTPUT_1 ----------------------------------------------
+          include : 1
+          file_name : C:\CSSP\Modelling\Mike21\Quebec\Blanc Sablon\Blan Sablon\Result\Blanc Sablon vent est 15 m-s.m21fm - Result Files\Trans.dfsu
+          title : Transport
+          type : 1
+          format : 2
+          delete_value : 1.E-35 (default)
+          flood_and_dry : 2
+          first_time_step : 0
+          last_time_step : 11520
+          time_step_frequency : 60
+          number_of_variables : 0 (default)
+          interpolation_type : 1
+
+
+        Section: PARAMETERS_2D ---------------------------------------
+            COMPONENT_1 : 1
+            U_VELOCITY : 1
+            V_VELOCITY : 1
+            CFL_NUMBER : 0
+          coordinate_type : LONG/LAT
+
+
+        Section: AREA ------------------------------------------------
+            number_of_points : 4
+
+
+          Section: POINT_1 -------------------------------------------
+              x : -57.22461
+              y : 51.334218
+
+
+          Section: POINT_2 -------------------------------------------
+              x : -57.22461
+              y : 51.439661
+
+
+          Section: POINT_3 -------------------------------------------
+              x : -57.031613
+              y : 51.439661
+
+
+          Section: POINT_4 -------------------------------------------
+              x : -57.031613
+              y : 51.334218
+
+
+======================== COMPUTATION STARTED =========================
+
+
+========================= COMPUTATION ENDED ==========================
+
+
+========================= Output Statistics ==========================
+ 
+--------------------------- Data File Summary ---------------------------
+  Creator: 
+  File   : C:\CSSP\Modelling\Mike21\Quebec\Blanc Sablon\Blan Sablon\Result\Blanc Sablon vent est 15 m-s.m21fm - Result Files\Trans.dfsu
+  Title  : Transport
+
+  Start date  Start time  Sets   Interval  Unit
+  2001-01-06    00:00:00   193       3600  second
+
+  Static items:
+  Item name            Item type               Minimum    Maximum Unit
+  Node id              Undefined                     1        982 undefined
+  X-coord              Undefined            -57.222718 -57.033505 undefined
+  Y-coord              Undefined             51.335252  51.438628 undefined
+  Z-coord              Undefined                   -91  -0.499959 undefined
+  Code                 Undefined                     0          4 undefined
+  Element id           Undefined                     1       1617 undefined
+  Element type         Undefined                    21         21 undefined
+  No of nodes          Undefined                     3          3 undefined
+  Connectivity         Undefined                     1        982 undefined
+
+  Dynamic items:
+  Item name            Item type               Minimum    Maximum Unit
+  Concentration - comp Concentration                 0 10442.9775 kg/m^3
+  U-velocity           u-velocity component  -2.021949    1.34324 m/s
+  V-velocity           v-velocity component  -1.763158   1.194625 m/s
+----------------------------------------------------------------------
+ 
+======================================================================
+
+
+================= Hydrodynamic Simulation Diagnostic =================
+ 
+  Shallow water equations
+  -----------------------
+ 
+  Number of time steps     : 1573090
+  Minimum time step (s)    : 0.234375
+  Maximum time step (s)    : 0.576923
+  Average time step (s)    : 0.439389
+ 
+  Transport equations
+  -----------------------
+ 
+  Number of time steps     : 281596
+  Minimum time step (s)    : 1.034483
+  Maximum time step (s)    : 30
+  Average time step (s)    : 2.45458
+======================================================================
+
+
+========================== Overall Timings ===========================
+  ------------------------------------------------------------------
+  Task                                      CPU time    Elapsed time
+  ------------------------------------------------------------------
+  Pre-processing                                0.17            1.38
+  Calculation                                5200.30         6796.38
+  Post-processing                               1.75            2.35
+  ------------------------------------------------------------------
+  Total                                      5202.38         6800.23
+  ------------------------------------------------------------------
+======================================================================
+
+
+================== Hydrodynamic Simulation Timings ===================
+  ------------------------------------------------------------------
+  Task                                      CPU time    Elapsed time
+  ------------------------------------------------------------------
+  Update forcings                             260.16          471.60
+  Solve Shallow Water eq.                    2609.39         2636.30
+  Temperatur/Salinity Module                    0.00            0.00
+    Update forcings                             0.00            0.00
+    Solve Advection-Dispersion eq.              0.00            0.00
+    Other calculation                           0.00            0.00
+  Turbulence Module                             0.00            0.00
+    Update forcings                             0.00            0.00
+    Solve Advection-Dispersion eq.              0.00            0.00
+    Other calculation                           0.00            0.00
+  Other calculation                          1943.66         3101.68
+  ------------------------------------------------------------------
+  Total                                      4842.48         6225.49
+  ------------------------------------------------------------------
+======================================================================
+
+
+==================== Transport Simulation Timings ====================
+  ------------------------------------------------------------------
+  Task                                      CPU time    Elapsed time
+  ------------------------------------------------------------------
+  Update forcings                              18.98           11.18
+  Solve Advection-Dispersion eq.              294.62          485.40
+  ------------------------------------------------------------------
+  Total                                       316.64          498.03
+  ------------------------------------------------------------------
+======================================================================
+
+
+============================ Performance =============================
+  Number of threads: 2
+======================================================================
+ 
+  Normal run completion
